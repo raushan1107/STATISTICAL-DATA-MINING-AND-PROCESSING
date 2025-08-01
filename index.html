@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATISTICAL DATA MINING AND PROCESSING: A Learning Journey | RR Education</title>
+
+    <!-- Chosen Palette: Academic Blue & Slate (Light grays, blues, and subtle accents) -->
+    <!-- Application Structure Plan: The SPA is structured into an introductory section, followed by three main learning modules: "Power BI Fundamentals", "Core Data Mining & EDA Concepts", and "Advanced Topics & Hands-On Applications". Each module presents individual blog posts as clickable cards in a responsive grid. Clicking a card triggers a modal dialog displaying a summary and a "Read More" link to the original blog post. A fixed top navigation bar allows quick jumps between modules. This design provides a clear learning path, manages information density through progressive disclosure, and enhances user engagement by making content exploration intuitive and self-directed. -->
+    <!-- Visualization & Content Choices: Content: Blog post titles and URLs, with generated summaries. -> Goal: Organize, Inform, Navigate, Engage. -> Viz/Presentation: HTML/CSS cards, responsive grid layouts, modal dialogs for details. -> Interaction: Clickable cards for modal activation, smooth scroll navigation. -> Justification: This approach transforms a linear list of blogs into an explorable, module-based learning journey, making the course content digestible and user-friendly. No complex data visualizations (charts) are necessary as the content is primarily textual and organizational. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-900 */
+        }
+        .nav-link:hover {
+            color: #3b82f6; /* blue-500 */
+        }
+        .module-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .module-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 42rem; /* max-w-2xl */
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Fixed Top Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#top" class="text-2xl font-bold text-blue-600">RR Education</a>
+            <div class="space-x-6">
+                <a href="#module1" class="nav-link text-slate-700 font-medium">Power BI Fundamentals</a>
+                <a href="#module2" class="nav-link text-slate-700 font-medium">Data Mining Core</a>
+                <a href="#module3" class="nav-link text-slate-700 font-medium">Advanced & Hands-On</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-24">
+        <!-- Course Overview Section -->
+        <section id="top" class="text-center mb-16">
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
+                STATISTICAL DATA MINING AND PROCESSING
+            </h1>
+            <p class="max-w-3xl mx-auto text-xl text-slate-700 leading-relaxed">
+                Embark on a comprehensive learning journey to master the art and science of extracting valuable insights from data. This course combines the power of Power BI for data analysis and visualization with fundamental and advanced data mining techniques.
+            </p>
+            <p class="max-w-3xl mx-auto text-lg text-slate-600 mt-4">
+                Explore the modules below, designed to guide you from foundational concepts to practical, hands-on applications.
+            </p>
+        </section>
+
+        <!-- Module 1: Power BI Fundamentals -->
+        <section id="module1" class="mb-16">
+            <h2 class="text-4xl font-bold text-slate-900 mb-8 text-center">
+                <span class="text-blue-600">&#x1F4CA;</span> Module 1: Power BI Fundamentals
+            </h2>
+            <p class="max-w-3xl mx-auto text-center text-slate-700 mb-10">
+                Begin your journey by mastering the essential tools and concepts of Power BI. This module covers everything from connecting to data sources to resolving common import errors and understanding the Power Query Editor.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lesson Card 1.1 -->
+                <div class="module-card p-6" data-lesson-id="lesson1_1">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Module 1 - Lesson 1: Getting Started with Power BI</h3>
+                    <p class="text-slate-600">Understand why data analysis is crucial, the role of a Data Analyst, and how Power BI fits into their workflow.</p>
+                </div>
+                <!-- Lesson Card 1.2 -->
+                <div class="module-card p-6" data-lesson-id="lesson1_2">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Power BI Advanced Learning</h3>
+                    <p class="text-slate-600">Dive into more powerful tools and techniques to take your data analysis and reporting skills to the next level.</p>
+                </div>
+                <!-- Lesson Card 1.3 -->
+                <div class="module-card p-6" data-lesson-id="lesson1_3">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Module 1 - Lesson 2: Getting Data from Multiple Sources</h3>
+                    <p class="text-slate-600">Learn the crucial first step: bringing data into Power BI from various sources like databases and web.</p>
+                </div>
+                <!-- Lesson Card 1.4 -->
+                <div class="module-card p-6" data-lesson-id="lesson1_4">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Module 1 - Lesson 3: Resolve Data Import Errors in Power BI</h3>
+                    <p class="text-slate-600">Equip yourself with techniques to identify and resolve common data import errors in Power BI.</p>
+                </div>
+                <!-- Lesson Card 1.5 -->
+                <div class="module-card p-6" data-lesson-id="lesson1_5">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Module 2 - Lesson 1: Introduction to Power Query Editor</h3>
+                    <p class="text-slate-600">Delve into the heart of data preparation: cleaning, shaping, and transforming raw data for analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Core Data Mining & EDA Concepts -->
+        <section id="module2" class="mb-16">
+            <h2 class="text-4xl font-bold text-slate-900 mb-8 text-center">
+                <span class="text-blue-600">&#x1F50D;</span> Module 2: Core Data Mining & EDA Concepts
+            </h2>
+            <p class="max-w-3xl mx-auto text-center text-slate-700 mb-10">
+                Build a strong theoretical foundation in data mining and exploratory data analysis. Understand key techniques, tools, and the statistical underpinnings of data-driven insights.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lesson Card 2.1 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_1">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Introduction to Statistical Data Mining</h3>
+                    <p class="text-slate-600">An introductory look into the principles and applications of statistical data mining.</p>
+                </div>
+                <!-- Lesson Card 2.2 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_2">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Exploratory Data Analysis (EDA) & Data Mining</h3>
+                    <p class="text-slate-600">Understand the synergy between EDA and data mining for uncovering patterns and insights.</p>
+                </div>
+                <!-- Lesson Card 2.3 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_3">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Mastering Exploratory Data Analysis (EDA)</h3>
+                    <p class="text-slate-600">A detailed guide to mastering the techniques of exploratory data analysis.</p>
+                </div>
+                <!-- Lesson Card 2.4 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_4">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Data Mining Techniques: Beginner's Guide</h3>
+                    <p class="text-slate-600">A foundational guide to various data mining techniques for beginners.</p>
+                </div>
+                <!-- Lesson Card 2.5 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_5">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Data Mining Techniques</h3>
+                    <p class="text-slate-600">An overview of different data mining methods and their applications.</p>
+                </div>
+                <!-- Lesson Card 2.6 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_6">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Data Mining Techniques in Power BI</h3>
+                    <p class="text-slate-600">Learn how to apply data mining techniques directly within Power BI.</p>
+                </div>
+                <!-- Lesson Card 2.7 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_7">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Your Data Mining Journey: Tools</h3>
+                    <p class="text-slate-600">Discover the essential tools that will accompany you on your data mining journey.</p>
+                </div>
+                <!-- Lesson Card 2.8 -->
+                <div class="module-card p-6" data-lesson-id="lesson2_8">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Statistics in Business Intelligence</h3>
+                    <p class="text-slate-600">Explore the critical role of statistics in deriving actionable insights from business data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Advanced Topics & Hands-On Applications -->
+        <section id="module3" class="mb-16">
+            <h2 class="text-4xl font-bold text-slate-900 mb-8 text-center">
+                <span class="text-blue-600">&#x1F4BB;</span> Module 3: Advanced Topics & Hands-On Applications
+            </h2>
+            <p class="max-w-3xl mx-auto text-center text-slate-700 mb-10">
+                Apply your knowledge to real-world scenarios, delve into advanced Power BI capabilities, and explore specialized data mining algorithms and custom visualizations.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lesson Card 3.1 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_1">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Hands-On Guide: Clean and Analyze Retail Data</h3>
+                    <p class="text-slate-600">A practical guide to data cleaning and analysis using a retail dataset.</p>
+                </div>
+                <!-- Lesson Card 3.2 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_2">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Hands-On Data Exploration & Mining Demos: Customer Segmentation</h3>
+                    <p class="text-slate-600">Practical demonstrations of data exploration and mining for customer segmentation.</p>
+                </div>
+                <!-- Lesson Card 3.3 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_3">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Hands-On Guide: Connecting Power BI to Azure SQL Database</h3>
+                    <p class="text-slate-600">Step-by-step instructions for connecting Power BI to an Azure SQL Database.</p>
+                </div>
+                <!-- Lesson Card 3.4 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_4">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Hands-On Guide: Connecting Power BI to Azure Data Lake Storage</h3>
+                    <p class="text-slate-600">A practical guide to connecting Power BI to Azure Data Lake Storage.</p>
+                </div>
+                <!-- Lesson Card 3.5 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_5">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">K-Means Clustering in Power BI with Python</h3>
+                    <p class="text-slate-600">Implement K-Means clustering within Power BI using Python scripting.</p>
+                </div>
+                <!-- Lesson Card 3.6 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_6">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Real-Time Banking Fraud Detection</h3>
+                    <p class="text-slate-600">Explore techniques and concepts for detecting fraud in real-time banking transactions.</p>
+                </div>
+                <!-- Lesson Card 3.7 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_7">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Power BI Custom Visuals: The Magic of TypeScript and D3.js</h3>
+                    <p class="text-slate-600">Unlock advanced visualization capabilities by building custom Power BI visuals with TypeScript and D3.js.</p>
+                </div>
+                <!-- Lesson Card 3.8 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_8">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Story Power BI Visuals: Raushan's Data Narratives</h3>
+                    <p class="text-slate-600">Learn to craft compelling data stories using Power BI visuals to convey insights effectively.</p>
+                </div>
+                <!-- Lesson Card 3.9 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_9">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Power BI Visual Selection Cheat Sheet</h3>
+                    <p class="text-slate-600">A quick reference guide to help you choose the right Power BI visual for your data.</p>
+                </div>
+                <!-- Lesson Card 3.10 -->
+                <div class="module-card p-6" data-lesson-id="lesson3_10">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Power BI Visuals Explained</h3>
+                    <p class="text-slate-600">A detailed explanation of various Power BI visuals and their best use cases.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Lesson Detail Modal -->
+    <div id="lesson-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <h3 id="modal-title" class="text-2xl font-bold text-slate-900 mb-4"></h3>
+            <p id="modal-summary" class="text-slate-700 mb-6"></p>
+            <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">
+                Read Full Blog Post <span class="ml-2">&#x2192;</span>
+            </a>
+            <button class="absolute top-4 right-4 text-slate-500 hover:text-slate-800 text-3xl font-light" onclick="closeModal(event)">
+                &times;
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">About the Instructor</h3>
+            <p class="max-w-xl mx-auto text-slate-300 mb-6">
+                Raushan Ranjan is a Microsoft Certified Trainer and an expert in .NET, Azure, Power Platform, and Data Analytics. With a passion for creating interactive learning experiences, he helps individuals and organizations maximize their potential through technology.
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://raushanranjan.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-200">
+                    <span class="text-xl">&#x1F310;</span> Visit Profile
+                </a>
+                <a href="https://www.linkedin.com/in/raushanranjan" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-200">
+                    <span class="text-xl">&#x1F517;</span> LinkedIn
+                </a>
+                <!-- Add other social links if desired -->
+            </div>
+            <p class="text-slate-400">&copy; 2025 RR Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const lessons = {
+            "lesson1_1": {
+                title: "Module 1 - Lesson 1: Getting Started with Power BI",
+                summary: "Understand why data analysis is crucial, the different flavors of analysis, the vital role of a Data Analyst, and how Power BI fits into their workflow.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/module-1-lesson-1-getting-started-with.html"
+            },
+            "lesson1_2": {
+                title: "Power BI Advanced Learning",
+                summary: "Welcome to the new series of blogs on Power BI Advanced! This series delves into more powerful tools and techniques to take your data analysis and reporting skills to the next level.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/power-bi-advanced-learning.html"
+            },
+            "lesson1_3": {
+                title: "Module 1 - Lesson 2: Getting Data from Multiple Sources",
+                summary: "Learn the crucial first step: bringing data into Power BI from various sources like databases, web, files, and cloud services.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/module-1-lesson-2-getting-data-from-multiple-sources.html"
+            },
+            "lesson1_4": {
+                title: "Module 1 - Lesson 3: Resolve Data Import Errors in Power BI",
+                summary: "Equip yourself with the knowledge and techniques to identify and resolve common data import errors in Power BI, including web authentication challenges.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/module-1-lesson-3-resolve-data-import-errors-in-power-bi.html"
+            },
+            "lesson1_5": {
+                title: "Module 2 - Lesson 1: Introduction to Power Query Editor",
+                summary: "Delve into the heart of data preparation in Power BI: the Power Query Editor, your data laboratory for cleaning, shaping, and transforming raw data.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/module-2-lesson-1-introduction-to-power-query-editor.html"
+            },
+            "lesson2_1": {
+                title: "Introduction to Statistical Data Mining",
+                summary: "An introductory look into the principles and applications of statistical data mining, bridging statistics with data analysis.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/introduction-to-statistical-data-mining.html"
+            },
+            "lesson2_2": {
+                title: "Exploratory Data Analysis (EDA) & Data Mining",
+                summary: "Understand the synergy between Exploratory Data Analysis (EDA) and data mining for uncovering patterns and insights.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/exploratory-data-analysis-data-mining.html"
+            },
+            "lesson2_3": {
+                title: "Mastering Exploratory Data Analysis (EDA)",
+                summary: "A detailed guide to mastering the techniques of exploratory data analysis to summarize, visualize, and understand data characteristics.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/mastering-exploratory-data-analysis-eda.html"
+            },
+            "lesson2_4": {
+                title: "Data Mining Techniques: Beginner's Guide",
+                summary: "A foundational guide to various data mining techniques, covering classification, clustering, association, and more for beginners.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/data-mining-techniques-beginners-guide.html"
+            },
+            "lesson2_5": {
+                title: "Data Mining Techniques",
+                summary: "An overview of different data mining methods and their applications across various industries and data types.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/data-mining-techniques.html"
+            },
+            "lesson2_6": {
+                title: "Data Mining Techniques in Power BI",
+                summary: "Learn how to apply data mining techniques directly within Power BI, leveraging its capabilities for advanced analysis.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/data-mining-techniques-in-power-bi.html"
+            },
+            "lesson2_7": {
+                title: "Your Data Mining Journey: Tools",
+                summary: "Discover the essential tools and software that will accompany you on your data mining journey, from data collection to visualization.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/your-data-mining-journey-tools.html"
+            },
+            "lesson2_8": {
+                title: "Statistics in Business Intelligence",
+                summary: "Explore the critical role of statistics in deriving actionable insights from business data, enhancing decision-making processes.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/statistics-in-business-intelligence.html"
+            },
+            "lesson3_1": {
+                title: "Hands-On Guide: Clean and Analyze Retail Data",
+                summary: "A practical, hands-on guide to data cleaning and analysis using a real-world retail dataset, covering common challenges and solutions.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/hands-on-guide-clean-and-analyze-retail.html"
+            },
+            "lesson3_2": {
+                title: "Hands-On Data Exploration & Mining Demos: Customer Segmentation",
+                summary: "Practical demonstrations of data exploration and mining techniques applied to customer segmentation, revealing valuable customer insights.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/hands-on-data-mining-demos-customer.html"
+            },
+            "lesson3_3": {
+                title: "Hands-On Guide: Connecting Power BI to Azure SQL Database",
+                summary: "Step-by-step instructions for securely connecting Power BI to an Azure SQL Database, enabling cloud-based data analysis.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/hands-on-guide-connecting-power-bi-to_31.html"
+            },
+            "lesson3_4": {
+                title: "Hands-On Guide: Connecting Power BI to Azure Data Lake Storage",
+                summary: "A practical guide to connecting Power BI to Azure Data Lake Storage, unlocking access to large-scale data sets.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/hands-on-guide-connecting-power-bi-to.html"
+            },
+            "lesson3_5": {
+                title: "K-Means Clustering in Power BI with Python",
+                summary: "Learn to implement K-Means clustering within Power BI using Python scripting, a powerful technique for data segmentation.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/k-means-clustering-in-power-bi-with.html"
+            },
+            "lesson3_6": {
+                title: "Real-Time Banking Fraud Detection",
+                summary: "Explore techniques and concepts for detecting fraudulent activities in real-time banking transactions using data mining principles.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/real-time-banking-fraud-detection.html"
+            },
+            "lesson3_7": {
+                title: "Power BI Custom Visuals: The Magic of TypeScript and D3.js",
+                summary: "Unlock advanced visualization capabilities by building custom Power BI visuals with TypeScript and D3.js for unique data storytelling.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/power-bi-custom-visuals-magic-of-typescript-and-d3js.html"
+            },
+            "lesson3_8": {
+                title: "Story Power BI Visuals: Raushan's Data Narratives",
+                summary: "Learn to craft compelling data stories using Power BI visuals to convey insights effectively and engage your audience.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/story-power-bi-visuals-raushans.html"
+            },
+            "lesson3_9": {
+                title: "Power BI Visual Selection Cheat Sheet",
+                summary: "A quick reference guide to help you choose the right Power BI visual for your data, ensuring optimal representation and clarity.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/power-bi-visual-selection-cheat-sheet.html"
+            },
+            "lesson3_10": {
+                title: "Power BI Visuals Explained",
+                summary: "A detailed explanation of various Power BI visuals and their best use cases, helping you leverage the full potential of Power BI.",
+                url: "https://learndataanalyticswithraushan.blogspot.com/2025/07/power-bi-visuals-explained.html"
+            }
+        };
+
+        const modal = document.getElementById('lesson-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalSummary = document.getElementById('modal-summary');
+        const modalLink = document.getElementById('modal-link');
+
+        document.querySelectorAll('.module-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const lessonId = card.dataset.lessonId;
+                const lesson = lessons[lessonId];
+                if (lesson) {
+                    modalTitle.textContent = lesson.title;
+                    modalSummary.textContent = lesson.summary;
+                    modalLink.href = lesson.url;
+                    modal.classList.add('visible');
+                }
+            });
+        });
+
+        function closeModal(event) {
+            // Only close if the click is on the overlay itself or the close button
+            if (event.target === modal || event.target.tagName === 'BUTTON') {
+                modal.classList.remove('visible');
+            }
+        }
+    </script>
+</body>
+</html>
